@@ -127,6 +127,7 @@ const TodoList = () => {
                 </Badge>
               </Heading>
               <Text>{(todo as any)?.description}</Text>
+              <Text>{(todo as any)?.date}</Text>
             </Box>
           ))}
       </SimpleGrid>

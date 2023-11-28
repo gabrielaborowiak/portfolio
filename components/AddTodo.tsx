@@ -9,6 +9,15 @@ import {
   Select,
   useToast,
   Center,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+  VStack,
 } from "@chakra-ui/react";
 
 import useAuth from "../hooks/useAuth";
@@ -17,10 +26,14 @@ import { addTodo } from "../api/todo";
 const AddTodo = () => {
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
+  const [date, setDate] = React.useState("");
   const [status, setStatus] = React.useState("pending");
   const [isLoading, setIsLoading] = React.useState(false);
   const toast = useToast();
   const { isLoggedIn, user } = useAuth();
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
 
   const handleTodoCreate = async () => {
     if (!isLoggedIn) {
@@ -36,6 +49,7 @@ const AddTodo = () => {
     const todo = {
       title,
       description,
+      date,
       status,
       userId: (user as { uid: string } | null)?.uid,
     };
@@ -49,13 +63,30 @@ const AddTodo = () => {
 
   return (
     <Box w="40%" margin={"0 auto"} display="block" mt={5}>
-      <Stack direction="column">
+      <VStack direction="column">
         <Center h="80px" color="white">
           <Text as="b" fontSize="3xl">
             Task Scribe
           </Text>
         </Center>
-        <Input
+        <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
+          Open
+        </Button>
+        <Drawer
+        isOpen={isOpen}
+        placement='left'
+        size='md'
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Criar todo</DrawerHeader>
+
+          <DrawerBody>
+            <VStack spacing={4}>
+            <Input
           placeholder="O que precisa ser feito?"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -64,6 +95,12 @@ const AddTodo = () => {
           placeholder="Como devo fazer isso?"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+        />
+        <Input
+          placeholder="Que dia?"
+          size="md"
+          type="datetime-local"
+          onChange={(e) => setDate(e.target.value)}
         />
         <Select value={status} onChange={(e) => setStatus(e.target.value)}>
           <option
@@ -79,14 +116,26 @@ const AddTodo = () => {
             Completo
           </option>
         </Select>
-        <Button
+
+            </VStack>
+            
+          </DrawerBody>
+
+          <DrawerFooter>
+            <Button variant='outline' mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button
           onClick={() => handleTodoCreate()}
           disabled={title.length < 1 || description.length < 1 || isLoading}
           variant="solid"
         >
           Criar
         </Button>
-      </Stack>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+      </VStack>
     </Box>
   );
 };
