@@ -69,15 +69,15 @@ const AddTodo = () => {
             Task Scribe
           </Text>
         </Center>
-        <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
-          Open
+        <Button colorScheme='teal' onClick={onOpen}>
+          Clique aqui
         </Button>
         <Drawer
         isOpen={isOpen}
         placement='left'
         size='md'
         onClose={onClose}
-        finalFocusRef={btnRef}
+        
       >
         <DrawerOverlay />
         <DrawerContent>
