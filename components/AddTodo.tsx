@@ -70,7 +70,7 @@ const AddTodo = () => {
           </Text>
         </Center>
         <Button colorScheme='teal' onClick={onOpen}>
-          Clique aqui
+          Criar Tarefa
         </Button>
         <Drawer
         isOpen={isOpen}
