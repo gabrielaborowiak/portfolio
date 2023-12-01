@@ -13,7 +13,7 @@
  * [Modelagem]() 
  * [Instalação]() 
  * [Stacks]() 
- * [Monitoramento](task-scribe-main/Docs/Monitramento)
+ * [Monitoramento](/Docs/Monitramento)
 
 ## Objetivo
 
