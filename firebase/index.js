@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { isClient } from 'next';
 import 'firebase/performance';
 
-const getPerformance = isClient ? require('firebase/performance').getPerformance : null;
+const getPerformance = isClient ? import('firebase/performance').getPerformance : null;
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
