@@ -13,7 +13,7 @@
  * [Modelagem]() 
  * [Instalação]() 
  * [Stacks]() 
- * [Monitoramento](portfolio/Docs/Monitoramento.md)
+ * [Monitoramento](Docs/Monitoramento.md)
 
 ## Objetivo
 
@@ -92,11 +92,11 @@ Por ser um site simples e fácil manutenção, dependendo do tempo e do requirem
 
 ## C4 Model
 
-O diagramas com base no modelo C4 se encontram [aqui.](portfolio/Docs/C4diagrams.md)
+O diagramas com base no modelo C4 se encontram [aqui.](Docs/C4diagrams.md)
 
 ## Requisitos e Casos de uso
 
-O requisitos funcionais e não funcionais se encontram [aqui.](portfolio/Docs/requisitos.md)
+O requisitos funcionais e não funcionais se encontram [aqui.](Docs/requisitos.md)
 
 
 ## Modelagem
