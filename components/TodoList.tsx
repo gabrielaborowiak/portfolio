@@ -122,8 +122,8 @@ const TodoList = () => {
                   }
                 >
                   {(todo as any)?.status == "completed"
-                    ? "Pendente"
-                    : "Completo"}
+                    ? "Completo"
+                    : "Pendente"}
                 </Badge>
               </Heading>
               <Text>{(todo as any)?.description}</Text>
