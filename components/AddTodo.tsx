@@ -64,7 +64,7 @@ const AddTodo = () => {
   return (
     <Box w="40%" margin={"0 auto"} display="block" mt={5}>
       <VStack direction="column">
-        <Center h="80px" color="white">
+        <Center h="80px" color="grey">
           <Text as="b" fontSize="3xl">
             Task Scribe
           </Text>
@@ -107,13 +107,13 @@ const AddTodo = () => {
             value={"pending"}
             style={{ color: "yellow", fontWeight: "bold" }}
           >
-            Pendente
+            Completo
           </option>
           <option
             value={"completed"}
             style={{ color: "green", fontWeight: "bold" }}
           >
-            Completo
+            Pendente
           </option>
         </Select>
 
