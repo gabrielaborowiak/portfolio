@@ -13,7 +13,7 @@
  * [Modelagem]() 
  * [Instalação]() 
  * [Stacks]() 
- * [Monitoramento](portfolio/Docs/Monitramento)
+ * [Monitoramento](portfolio/Docs/Monitoramento)
 
 ## Objetivo
 
