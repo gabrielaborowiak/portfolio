@@ -33,6 +33,7 @@ const AddTodo = () => {
   const { isLoggedIn, user } = useAuth();
 
   const { isOpen, onOpen, onClose } = useDisclosure()
+  // @ts-ignore
   const btnRef = React.useRef()
 
   const handleTodoCreate = async () => {

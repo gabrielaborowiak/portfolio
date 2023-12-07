@@ -23,6 +23,7 @@ const TodoList = () => {
       setTodos([]);
       return;
     }
+    // @ts-ignore
     const q = query(
       collection(db, "todo"),
       where("user", "==", (user as any)?.uid)

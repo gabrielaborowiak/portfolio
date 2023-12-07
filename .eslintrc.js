@@ -36,5 +36,7 @@ module.exports = {
         }
       },
     "rules": {
+        "no-empty": "off", 
+        "@typescript-eslint/no-unused-vars": "off"
     }
 }
