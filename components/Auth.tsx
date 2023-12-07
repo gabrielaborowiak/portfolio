@@ -32,7 +32,6 @@ const Auth = () => {
       </Button>{" "}
       {isLoggedIn && (
         <>
-        // @ts-ignore
           <Button color="green.500" leftIcon={<FaUser />}>
             {(user as any)?.email}
           </Button>{" "}
