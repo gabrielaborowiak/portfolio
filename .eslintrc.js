@@ -6,7 +6,8 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "next"
     ],
     "overrides": [
         {
@@ -28,7 +29,8 @@ module.exports = {
     },
     "plugins": [
         "@typescript-eslint",
-        "react"
+        "react",
+        "next"
     ],
     "settings": {
         "react": {
@@ -36,7 +38,13 @@ module.exports = {
         }
       },
     "rules": {
+        "@typescript-eslint/ban-ts-comment": ["error", {
+            "ts-ignore": "allow-with-description",
+            "minimumDescriptionLength": 3
+          }],
         "no-empty": "off", 
-        "@typescript-eslint/no-unused-vars": "off"
+        "@typescript-eslint/no-unused-vars": "off",
+        "react/react-in-jsx-scope": "off"
+        
     }
 }
