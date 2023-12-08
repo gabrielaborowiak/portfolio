@@ -1,4 +1,4 @@
- ![image](https://github.com/gabrielaborowiak/portfolio/assets/61890701/20509dac-2b89-467a-bb8b-bd2c88143d26)
+![Task logo](image.png)
 
 
 
