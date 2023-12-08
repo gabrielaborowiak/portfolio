@@ -1,4 +1,3 @@
-Abaixo segue o monitoramento realizado em New Realic. O site ainda não foi utilizado então será atualizado assim que obtiver as informações gráficas.
+Abaixo segue o monitoramento realizado em New Realic. 
 
-
-![NewRealic](image.png)
+![Monitoramento](image-3.png)
