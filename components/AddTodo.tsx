@@ -123,13 +123,13 @@ const AddTodo = () => {
             value={"pending"}
             style={{ color: "yellow", fontWeight: "bold" }}
           >
-            Completo
+            Pendente
           </option>
           <option
             value={"completed"}
             style={{ color: "green", fontWeight: "bold" }}
           >
-            Pendente
+            Completo
           </option>
         </Select>
 
