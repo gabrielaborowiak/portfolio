@@ -52,7 +52,7 @@ const TodoList = () => {
 
   const handleToggle = async (id: any, status: string) => {
     const newStatus = status == "completed" ? "pending" : "completed";
-    const newStatusLabel = status == "completed" ? "pendente" : "completo";
+    const newStatusLabel = status == "completed" ? "completo" : "pendente";
     await toggleTodoStatus({ docId: id, status: newStatus });
     toast({
       title: `Todo marcado como ${newStatusLabel}.`,
