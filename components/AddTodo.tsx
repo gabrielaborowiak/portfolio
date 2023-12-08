@@ -39,7 +39,7 @@ const AddTodo = () => {
   const handleTodoCreate = async () => {
     if (!isLoggedIn) {
       toast({
-        title: "Você precisa estar logado para criar um todo.",
+        title: "Você precisa estar logado para criar uma tarefa.",
         status: "error",
         duration: 9000,
         isClosable: true,
@@ -59,7 +59,7 @@ const AddTodo = () => {
     setTitle("");
     setDescription("");
     setStatus("pending");
-    toast({ title: "Todo criado com sucesso!", status: "success" });
+    toast({ title: "Tarefa criado com sucesso!", status: "success" });
   };
 
   return (
@@ -70,9 +70,24 @@ const AddTodo = () => {
             Task Scribe
           </Text>
         </Center>
-        <Button colorScheme='teal' onClick={onOpen}>
+        <Button
+          colorScheme="teal"
+              onClick={() => {
+                if (!isLoggedIn) {
+                toast({
+              title: "Você precisa estar logado para criar um todo.",
+             status: "error",
+            duration: 9000,
+          isClosable: true,
+          });
+        } else {
+        onOpen(); 
+      }
+    }}
+    >   
           Criar Tarefa
         </Button>
+
         <Drawer
         isOpen={isOpen}
         placement='left'
